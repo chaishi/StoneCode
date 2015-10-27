@@ -93,7 +93,7 @@
 #### 实例4 嵌套 Describes
 >注意上面的代码只在describe( )函数上执行一次，这就是为什么counter没有重置为0。如果你想在第二个spec（can multiply a number）中将counter重置，请使用beforeEach( )函数。
 
-‘describe('some suite', function () {
+`describe('some suite', function () {
 	var suiteWideFoo;
 	beforeEach(function () {
 		suiteWideFoo = 0;
@@ -112,4 +112,4 @@
 		expect(suiteWideFoo).toEqual(0);
 		expect(nestedSuiteBar).toEqual(undefined); // Spec will fail with ReferenceError: nestedSuiteBar is not undefined
 	});
-});’
+});`
