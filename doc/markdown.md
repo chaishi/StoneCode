@@ -52,13 +52,13 @@
 > 用 2个 ` 把代码包括起来
 
 
-`/*
+/*
  * @description Dom列表中，点击某一列表项，该列表项样式突出（改变），其它列表项正常显示
  * @param {Number} index 待突出的列表项 
  * @param {String} select 列表项选择器
  * @param {String} classi 突出列表项的样式表(class类)
  */
-base.setActive = function(index, select, classi) {
+`	base.setActive = function(index, select, classi) {
 	$(select).each(function(i){
 		if(i === index) {
 			$(this).addClass(classi);
@@ -66,7 +66,7 @@ base.setActive = function(index, select, classi) {
 			$(this).removeClass(classi);
 		}
 	});
-}`
+}	`
 
 
 ## 分割线
@@ -75,7 +75,11 @@ base.setActive = function(index, select, classi) {
 
 ***
 
+## 下划线
 
+> 3个_
+
+___
 
 
 
