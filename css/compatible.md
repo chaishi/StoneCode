@@ -26,7 +26,7 @@ http://img2.tuicool.com/iEvEVr.png
 - IE7、FF 共用 height: 100px !important; 
 
 **清除浮动**
-.clear {
+.clear-float {
 	*zoom: 1;
 }
 .clear-float: after{
