@@ -33,6 +33,11 @@ var base = (function(base,undefined){
 		return deepObj;
 	};
 	
+	
+	/* ===============================================================================
+	 * @description Dom操作相关js
+	 ===============================================================================*/
+	
 	/*
 	 * @description Dom列表中，点击某一列表项，该列表项样式突出（改变），其它列表项正常显示
 	 * @param {Number} index 待突出的列表项 
@@ -47,5 +52,29 @@ var base = (function(base,undefined){
 				$(this).removeClass(classi);
 			}
 		});
+	}
+	
+	
+	//原生js添加事件处理程序
+	base.bindEvent(obj, event, fn) {
+		if(obj.addEventListener){
+            obj.addEventListener(event, fn, false);
+        }else{
+            var _fn = fn;
+			fn = function() {
+				_fn.call(obj);
+			}
+           obj.attachEvent('on' + event, fn);
+           return fn;
+        }
+	}
+	
+	//移除事件处理程序， 注意：移除的是base.bindEvent返回的句柄
+	base.unBindEvent(obj, event, fn) {
+		if(obj.removeEventListener) {
+			obj.removeEventListener(event, fn, false);
+		}else {
+			obj.detachEvent('on' + event, fn);
+		}
 	}
 })(base);
