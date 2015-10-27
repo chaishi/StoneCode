@@ -1,6 +1,17 @@
 
 ###兼容性处理
 
+**解决不同浏览器边距不同**
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+	margin: 0;
+	padding: 0;
+}
+
+**淘宝通用字体**
+body, button, input, select, textarea {
+	font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+} 
+
 **rgba中透明值和 filter数值转换**
 http://img2.tuicool.com/iEvEVr.png
 
