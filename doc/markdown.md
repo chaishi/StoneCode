@@ -27,24 +27,22 @@
 ## 图片与链接
 
 ### 插入链接
->"[Baidu][www.baidu.com]"
 
 [Baidu][www.baidu.com]
 
-###插入图片
 
->! "[测试图片](http://ww2.sinaimg.cn/large/6aee7dbbgw1efffa67voyj20ix0ctq3n.jpg)"
+###插入图片
 
 ![测试图片](http://ww2.sinaimg.cn/large/6aee7dbbgw1efffa67voyj20ix0ctq3n.jpg)
 
 
 ## 粗体与斜体
 
-> 粗体: " **这里是粗体**"
+> 粗体
 
 **这里是粗体**
 
-> 斜体: "*这里是斜体*"
+> 斜体
 
 *这里是斜体*
 
