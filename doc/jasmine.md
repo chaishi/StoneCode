@@ -32,17 +32,17 @@
 
 #### 自定义匹配器
 
-`beforeEach(function() {
-	this.addMatchers({
-		toBeLessThan: function(expected) {
-			var actual = this.actual;
-			var notText = this.isNot ? " not" : "";
-			this.message = function () {
-				return "Expected " + actual + notText + " to be less than " + expected;
-			}
-			return actual < expected;
-		}
-	});
+`beforeEach(function() {  
+	this.addMatchers({  
+		toBeLessThan: function(expected) {  
+			var actual = this.actual;  
+			var notText = this.isNot ? " not" : "";  
+			this.message = function () {  
+				return "Expected " + actual + notText + " to be less than " + expected;  
+			}  
+			return actual < expected;  
+		}  
+	});  
 });`
 
 
