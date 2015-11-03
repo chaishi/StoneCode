@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>bootstrap2练习</title>
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<style>
+			
+			.base-width {
+				width: 1170px !important;
+			}
+			.yellow {
+				background-color: yellow;
+			}
+			.green {
+				background-color: green;
+			}
+			.legend {
+				display: block;
+			    width: 100%;
+			    padding: 0;
+			    margin-bottom: 20px;
+			    font-size: 21px;
+			    line-height: 40px;
+			    color: #333;
+			    border: 0;
+			    border-bottom: 1px solid #e5e5e5;
+			}
+
+			.navbar-theme {
+				color: #fff;
+				background-color: green;
+			}
+
+			.navbar-theme .container .nav>li>a {
+				color: #ddd;
+				text-shadow: 0 0 0 #fff;
+			}
+
+			/*优先级高于 .navbar .brand, 即可覆盖原有样式*/
+			.navbar-theme .container .brand {
+				color: #ddd;
+				text-shadow: 0 0 5px #fff;
+			}
+			.navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
+				color: #fff;
+			}
+			/*同名class覆盖*/
+			.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+				color: #fff;
+				background-color: #0D5F0D;
+			}
+
+			.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus {
+				color: #fff;
+				background-color: green;
+			}
+
+			a {
+				color: green;
+			}
+
+			.nav1 a:hover ul{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+
+		<ul class="nav1">
+			<li>
+				<a href="#">link</a>
+                <ul>
+                  <li><a href="#">link1</a></li>
+                  <li><a href="#">link2</a></li>
+                  <li><a href="#">link3</a></li>
+                </ul>
+			</li>
+		</ul>
+
+		<div class="navbar navbar-theme">
+		  <div class="container base-width">
+		    <a class="brand" href="#">Title</a>
+		    <ul class="nav">
+		      <li class="active"><a href="#">首页</a></li>
+		      <li><a href="#">Link</a></li>
+		      <li><a href="#">Link</a></li>
+		    </ul>
+		  </div>
+		</div>
+		
+		<div class="container base-width">
+		  <div class="row">
+		    <div class="span2">
+		      <ul class="nav nav-pills nav-stacked">
+		      	<li><a href="#">全局样式表</a></li>
+		      	<li class="active"><a href="#">栅格系统</a></li>
+		      	<li><a href="#">响应式布局</a></li>
+		      </ul>
+		    </div>
+		    <div class="span10">
+		    	<div class="row">
+		    		<div class="span2">
+		    			<h3>sunshine</h3>
+		    		</div>
+		    		<div class="span8">
+		    			<p>this is pig house</p>
+		    		</div>
+		    	</div>
+		    	<dl class="dl-horizontal">
+				  <dt>sunshine</dt>
+				  <dd>this is sunshine</dd>
+				</dl>
+
+				<form>
+					<div class="legend">学生信息</div>
+					<label for="user">
+					  姓名: <input type="text" class="input-sm" id="user" placeholder="请输入姓名">
+					</label>
+					<label for="name">
+					  姓名: <input type="text" class="input-sm" id="name" placeholder="请输入姓名">
+					</label>
+					<label class="checkbox">
+						<input type=checkbox > Check me out
+					</label>
+					<button type="submit" class="btn">Search</button>
+				</form>
+
+				<form class="form-inline">
+				  <label>
+				    Email: <input type="text" class="input-small" placeholder="Email">
+				  </label>
+				  <label>
+				  	password: <input type="password" class="input-small" placeholder="Password">
+				  </label>
+				  
+				  <label class="checkbox">
+				    <input type="checkbox"> Remember me
+				  </label>
+				  <button type="submit" class="btn">Sign in</button>
+				</form>
+
+				<form class="form-horizontal">
+					<legend>教师信息</legend>
+					<div class="control-group">
+						<label class="control-label" for="email">Email</label>
+						<div class="controls">
+							<input type=text id="email">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<label class="checkbox">
+								<input type=checkbox> check me out
+							</label>
+						</div>
+					</div>
+				</form>
+
+				<div class="control-group">
+				  <label class="control-label" for="inputIcon">Email address</label>
+				  <div class="controls">
+				    <div class="input-prepend">
+				      <span class="add-on"><i class="icon-envelope"></i></span>
+				      <input class="span2" id="inputIcon" type="text">
+				    </div>
+				  </div>
+				</div>
+
+				<div class="dropdown">
+				  <!-- Link or button to toggle dropdown -->
+				  <ul class="dropdown-menu" role="menu"  aria-labelledby="dLabel">
+				    <li><a tabindex="-1" href="#">Action</a></li>
+				    <li><a tabindex="-1" href="#">Another action</a></li>
+				    <li><a tabindex="-1" href="#">Something else here</a></li>
+				    <li class="divider"></li>
+				    <li><a tabindex="-1" href="#">Separated link</a></li>
+				  </ul>
+				</div>
+
+
+				<ul class="nav nav-tabs" id="myTab">
+				  <li class="active"> <a href="#home" data-toggle="tab">首页</a> </li>
+				  <li><a href="#profile" data-toggle="tab">希腊</a></li>
+				  <li><a href="#messages" data-toggle="tab">巴拉</a></li>
+				</ul>
+				<div class="tab-content">
+				  <div class="tab-pane active" id="home">首页</div>
+				  <div class="tab-pane" id="profile">希腊</div>
+				  <div class="tab-pane" id="messages">巴拉</div>
+				</div>
+
+
+		    </div>
+		  </div>
+		</div>
+	</body>
+	<script src="lib/jquery-1.8.3.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script>
+	    $('#myTab a').click(function (e) {
+		  e.preventDefault();
+		  $(this).tab('show');
+		})
+
+		$('#myTab a:first').on('shown', function (e) {
+		  var id = e.target.getAttribute('href'); // activated tab
+		  $(id).html(123);
+		  e.relatedTarget // previous tab
+		})
+	</script>
+</html>

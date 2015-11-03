@@ -1,0 +1,11 @@
+body {
+  background-color: green;
+}
+.class {
+  filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
+}
+.cl {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
