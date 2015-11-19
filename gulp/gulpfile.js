@@ -59,10 +59,9 @@ gulp.task('buildCSS', function() {
 	.pipe(gulp.dest('build/css/'));
 });
 
-//该任务未实践成功
+//复制文件，无需任何插件
 gulp.task('copyCSS', function() {
 	gulp.src('css/**/*.css')
-	.pipe(copy())
 	.pipe(gulp.dest('build/css/'));
 });
 
